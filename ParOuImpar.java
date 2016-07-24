@@ -11,6 +11,7 @@ public class ParOuImpar {
 		int n = input.nextInt();
 		
 		while (n!=0){
+			input.nextLine();
 			String jogadorPar = input.nextLine();			
 			String jogadorImpar = input.nextLine();
 			
