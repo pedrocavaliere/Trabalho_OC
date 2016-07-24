@@ -7,11 +7,11 @@ public class ParOuImpar {
 		List<String> ganhadores = new ArrayList<String>();
 		
 		int partidas = 0;
-		int rodadas = 0;
+		List<Integer> rodadasPorPartida = new ArrayList<Integer>();
 		int n = input.nextInt();
 		
 		while (n!=0){
-			String jogadorPar = input.nextLine();
+			String jogadorPar = input.nextLine();			
 			String jogadorImpar = input.nextLine();
 			
 			for (int i=0; i<n; i++){
@@ -23,15 +23,19 @@ public class ParOuImpar {
 				}
 				else{
 					ganhadores.add(jogadorImpar);
-				}
-				rodadas++;
+			    }
 			}
+			rodadasPorPartida.add(n);
 			partidas++;
 			n = input.nextInt();
 		}
+		int h = 0;
 		for (int j=0; j<partidas; j++){
-			System.out.println("Teste" + j+1);
-			System.out.println(ganhadores.get(j));
+			System.out.println("Teste " + (j+1));
+			for (int g=0; g<rodadasPorPartida.get(j); g++){
+				System.out.println(ganhadores.get(h));
+				h++;
+			}
 			System.out.println();
 		}
 	}
