@@ -12,6 +12,13 @@ public class ParOuImpar {
 			for (int i=0; i<n; i++){
 				int jogada1 = input.nextInt();
 				int jogada2 = input.nextInt();
+				
+				if ((jogada1+jogada2)%2==0){
+					ganhadores [i] = jogadorPar;
+				}
+				else{
+					ganhadores[i] = jogadorImpar;
+				}
 			}
 			
 			n = input.nextInt();
